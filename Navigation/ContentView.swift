@@ -13,7 +13,7 @@ struct ContentView: View {
             VStack {
                 Text("This is the root view")
                     .font(.largeTitle)
-                NavigationLink(destination: Text("This is the second view")
+                NavigationLink(destination: NavigationSecondView()
                     .font(.largeTitle)) {
                     Text("Click me!")
                         .foregroundColor(Color.purple)
