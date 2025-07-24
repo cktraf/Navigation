@@ -13,14 +13,19 @@ struct ContentView: View {
             VStack {
                 Text("This is the root view")
                     .font(.largeTitle)
-                NavigationLink(destination: NavigationSecondView()
-                    .font(.largeTitle)) {
-                    Text("Click me!")
-                        .foregroundColor(Color.purple)
-                }
-            }
-        }
-    }
+                
+                    //.toolbar{
+                        NavigationLink(destination: NavigationSecondView()
+                            .font(.largeTitle)) {
+                                Text("Click me!")
+                                    .foregroundColor(Color.purple)
+                            }//end nav link
+                    //}//end toolbar
+            }//end v stack
+            .navigationTitle("Root View")
+            .navigationBarHidden(true)
+        }//end nav stack
+    }//end body
 }
 
 #Preview {
